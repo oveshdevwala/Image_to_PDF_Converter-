@@ -53,7 +53,6 @@ class PdfHomeScreenState extends State<PdfHomeScreen> {
                 ),
               ));
   }
-
   Padding noImageFound() {
     return Padding(
       padding: const EdgeInsets.all(25),
