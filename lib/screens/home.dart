@@ -84,6 +84,18 @@ class PdfHomeScreenState extends State<PdfHomeScreen> {
     );
   }
 
+  myFlushBar({var title, var msg}) {
+    Flushbar(
+      title: title,
+      duration: const Duration(seconds: 5),
+      message: msg.toString(),
+      icon: Icon(
+        Icons.save,
+        color: UIColors.shade500,
+      ),
+    ).show(context);
+  }
+
   Row photosSelectButtons() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.end,
@@ -169,18 +181,6 @@ class PdfHomeScreenState extends State<PdfHomeScreen> {
         },
       ));
     }
-  }
-
-  myFlushBar({var title, var msg}) {
-    Flushbar(
-      title: title,
-      duration: const Duration(seconds: 5),
-      message: msg.toString(),
-      icon: Icon(
-        Icons.save,
-        color: UIColors.shade500,
-      ),
-    ).show(context);
   }
 
   Future<void> savePdf() async {
